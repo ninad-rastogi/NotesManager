@@ -1,7 +1,67 @@
 {% extends "base.html" %}
 {% block title %}
-    Home
+    Home - Notes Manager
 {% endblock title %}
 {% block header %}
-    Welcome to {{ page }}
 {% endblock header %}
+{% block content %}
+    <div class="page-header">
+        <h2>
+            <i class="bi bi-house-door-fill"></i> Welcome to Notes Manager
+        </h2>
+    </div>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card shadow-sm">
+                    <div class="card-body p-5 text-center">
+                        <h3 class="card-title mb-4">
+                            <i class="bi bi-clipboard-check"
+                               style="font-size: 3rem;
+                                      color: #667eea"></i>
+                        </h3>
+                        <h4 class="mb-3">Organize Your Tasks Efficiently</h4>
+                        <p class="lead text-muted mb-4">
+                            Welcome to Notes Manager - your personal task management solution.
+                            Keep track of your daily tasks, mark them as complete, and stay organized.
+                        </p>
+                        <a href="{% url 'todolist' %}" class="btn btn-primary btn-lg">
+                            <i class="bi bi-list-check"></i> Go to Todo List
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-plus-circle-fill text-primary"
+                           style="font-size: 2.5rem"></i>
+                        <h5 class="card-title mt-3">Add Tasks</h5>
+                        <p class="card-text text-muted">Quickly add new tasks to your list and keep track of what needs to be done.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-check-circle-fill text-success"
+                           style="font-size: 2.5rem"></i>
+                        <h5 class="card-title mt-3">Mark Complete</h5>
+                        <p class="card-text text-muted">Check off tasks as you complete them and watch your progress grow.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-pencil-square text-info" style="font-size: 2.5rem;"></i>
+                        <h5 class="card-title mt-3">Edit & Organize</h5>
+                        <p class="card-text text-muted">Edit your tasks anytime and keep your list organized and up-to-date.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

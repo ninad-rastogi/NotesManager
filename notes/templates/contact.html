@@ -1,7 +1,116 @@
 {% extends "base.html" %}
 {% block title %}
-    Contact
+    Contact - Notes Manager
 {% endblock title %}
 {% block header %}
-    Welcome to {{ page }}
 {% endblock header %}
+{% block content %}
+    <div class="page-header">
+        <h2>
+            <i class="bi bi-envelope-fill"></i> Contact Us
+        </h2>
+    </div>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card shadow-sm">
+                    <div class="card-body p-5">
+                        <h3 class="card-title mb-4 text-center">Get In Touch</h3>
+                        <p class="text-center text-muted mb-5">Have questions or suggestions? We'd love to hear from you!</p>
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">
+                                    <i class="bi bi-person"></i> Your Name
+                                </label>
+                                <input type="text"
+                                       class="form-control"
+                                       id="name"
+                                       placeholder="Enter your name"
+                                       required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">
+                                    <i class="bi bi-envelope"></i> Email Address
+                                </label>
+                                <input type="email"
+                                       class="form-control"
+                                       id="email"
+                                       placeholder="Enter your email"
+                                       required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">
+                                    <i class="bi bi-chat-left-text"></i> Subject
+                                </label>
+                                <input type="text"
+                                       class="form-control"
+                                       id="subject"
+                                       placeholder="What's this about?"
+                                       required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="form-label">
+                                    <i class="bi bi-chat-left-dots"></i> Message
+                                </label>
+                                <textarea class="form-control"
+                                          id="message"
+                                          rows="5"
+                                          placeholder="Tell us what you think..."
+                                          required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="bi bi-send"></i> Send Message
+                                </button>
+                            </div>
+                        </form>
+                        <hr class="my-5">
+                        <h4 class="mb-4 text-center">Other Ways to Reach Us</h4>
+                        <div class="row text-center">
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <i class="bi bi-envelope-fill text-primary" style="font-size: 2rem;"></i>
+                                    <h6 class="mt-2">Email</h6>
+                                    <p class="text-muted small">ninadrastogi@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <i class="bi bi-telephone-fill text-success" style="font-size: 2rem;"></i>
+                                    <h6 class="mt-2">Phone</h6>
+                                    <p class="text-muted small">+91-xxxxxxxxxx</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <i class="bi bi-geo-alt-fill text-danger" style="font-size: 2rem;"></i>
+                                    <h6 class="mt-2">Address</h6>
+                                    <p class="text-muted small">Indore, Madhya Pradesh, IN</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <p class="text-muted mb-2">Follow us on social media</p>
+                            <div>
+                                {% comment %} <a href="#" class="btn btn-outline-primary btn-sm me-2">
+                                    <i class="bi bi-twitter"></i>
+                                </a> {% endcomment %}
+                                {% comment %} <a href="#" class="btn btn-outline-primary btn-sm me-2">
+                                    <i class="bi bi-facebook"></i>
+                                </a> {% endcomment %}
+                                <a href="https://www.linkedin.com/in/ninadrastogi/"
+                                   class="btn btn-outline-primary btn-sm me-2">
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+                                <a href="https://github.com/ninad-rastogi"
+                                   class="btn btn-outline-primary btn-sm">
+                                    <i class="bi bi-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

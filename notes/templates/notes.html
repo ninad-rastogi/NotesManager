@@ -1,7 +1,70 @@
 {% extends "base.html" %}
 {% block title %}
-    Notes
+    Notes - Notes Manager
 {% endblock title %}
 {% block header %}
-    Welcome to {{ page }}
 {% endblock header %}
+{% block content %}
+    <div class="page-header">
+        <h2>
+            <i class="bi bi-journal-text"></i> Notes
+        </h2>
+    </div>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card shadow-sm">
+                    <div class="card-body p-5 text-center">
+                        <i class="bi bi-journal-richtext"
+                           style="font-size: 4rem;
+                                  color: #667eea"></i>
+                        <h3 class="mt-4 mb-3">Notes Feature Coming Soon!</h3>
+                        <p class="lead text-muted mb-4">
+                            We're working on bringing you a powerful notes management system.
+                            In the meantime, check out our Todo List feature to organize your tasks.
+                        </p>
+                        <div class="row mt-5">
+                            <div class="col-md-6 offset-md-3">
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-3">Upcoming Features</h5>
+                                        <ul class="list-unstyled text-start">
+                                            <li class="mb-2">
+                                                <i class="bi bi-check2 text-success me-2"></i>
+                                                Rich text editing
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-check2 text-success me-2"></i>
+                                                Categories and tags
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-check2 text-success me-2"></i>
+                                                File attachments
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-check2 text-success me-2"></i>
+                                                Search and filter
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="bi bi-check2 text-success me-2"></i>
+                                                Note sharing
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <a href="{% url 'todolist' %}" class="btn btn-primary btn-lg me-2">
+                                <i class="bi bi-list-check"></i> Try Todo List
+                            </a>
+                            <a href="{% url 'home' %}" class="btn btn-outline-secondary btn-lg">
+                                <i class="bi bi-house-door"></i> Back to Home
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
