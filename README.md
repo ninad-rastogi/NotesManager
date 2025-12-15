@@ -72,7 +72,7 @@ NotesManager/
 1. **Clone the repository**
 
    ```bash
-   cd D:\Ninad\Study\Django\NotesManager
+   git clone https://github.com/ninad-rastogi/NotesManager.git
    ```
 
 2. **Create and activate virtual environment** (recommended)
