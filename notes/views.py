@@ -4,7 +4,6 @@ from django.contrib import messages
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.views.decorators.http import require_http_methods
-
 from notes.forms import TaskForm
 from notes.models import TodoList
 
@@ -70,6 +69,7 @@ def todolist(request):
             # Redirect to the same page to see the updated list
             # This prevents form resubmission on page refresh
             return redirect("todolist")
+
         else:
             messages.error(request, "Something went wrong! Please check your input.")
 
@@ -92,6 +92,7 @@ def delete_task(request, task_id):
     task_name = task_to_delete.task
     task_to_delete.delete()
     messages.success(request, f'Task - "{task_name}" deleted successfully!')
+
     return redirect("todolist")
 
 
@@ -104,6 +105,7 @@ def edit_task(request, task_id):
     Returns:
         JsonResponse with success status and message
     """
+
     try:
         # Get the task object or return 404
         task = get_object_or_404(TodoList, id=task_id)
@@ -123,6 +125,7 @@ def edit_task(request, task_id):
         task.save()
 
         messages.success(request, "Task edited successfully!")
+
         return JsonResponse({"success": True, "message": "Task updated successfully!"})
 
     except json.JSONDecodeError:
